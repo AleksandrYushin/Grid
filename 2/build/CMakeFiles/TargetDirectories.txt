@@ -1,0 +1,6 @@
+/home/alexandro/Programms/VS_code_progect/Setca/2/build/CMakeFiles/cubic2d.dir
+/home/alexandro/Programms/VS_code_progect/Setca/2/build/CMakeFiles/cubic3d.dir
+/home/alexandro/Programms/VS_code_progect/Setca/2/build/CMakeFiles/tetr3d.dir
+/home/alexandro/Programms/VS_code_progect/Setca/2/build/CMakeFiles/my.dir
+/home/alexandro/Programms/VS_code_progect/Setca/2/build/CMakeFiles/edit_cache.dir
+/home/alexandro/Programms/VS_code_progect/Setca/2/build/CMakeFiles/rebuild_cache.dir

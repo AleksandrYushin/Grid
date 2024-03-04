@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.11"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "gmsh",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "cub::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cub-ad64af29ebbcc6c5982c.json",
+					"name" : "cub",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sample01::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sample01-bb4a9269859967c881d1.json",
+					"name" : "sample01",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sample02::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sample02-6c8e2fddf15f8cdb55fa.json",
+					"name" : "sample02",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sample03::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sample03-eb1a40756eacaec35852.json",
+					"name" : "sample03",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sample04::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sample04-fb19d86b0e0aa76c5d6a.json",
+					"name" : "sample04",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/alexandro/Programms/VS_code_progect/Setca/build",
+		"source" : "/home/alexandro/Programms/VS_code_progect/Setca"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

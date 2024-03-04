@@ -1,0 +1,7 @@
+/home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles/sample01.dir
+/home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles/sample02.dir
+/home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles/sample03.dir
+/home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles/sample04.dir
+/home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles/cub.dir
+/home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles/edit_cache.dir
+/home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles/rebuild_cache.dir

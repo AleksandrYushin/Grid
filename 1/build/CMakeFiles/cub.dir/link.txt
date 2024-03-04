@@ -1,0 +1,1 @@
+/usr/bin/c++ -std=c++11 -g CMakeFiles/cub.dir/cub.cpp.o -o cub  /usr/lib/x86_64-linux-gnu/libgmsh.so 
