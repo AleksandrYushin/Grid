@@ -1,5 +1,5 @@
 CMakeFiles/cub.dir/cub.cpp.o: \
- /home/alexandro/Programms/VS_code_progect/Setca/cub.cpp \
+ /home/alexandro/Programms/VS_code_progect/Grid/1/cub.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/set \
  /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_algobase.h \

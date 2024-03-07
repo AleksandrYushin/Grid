@@ -1,4 +1,4 @@
-# Install script for directory: /home/alexandro/Programms/VS_code_progect/Setca
+# Install script for directory: /home/alexandro/Programms/VS_code_progect/Grid/1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/alexandro/Programms/VS_code_progect/Setca/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/alexandro/Programms/VS_code_progect/Grid/1/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

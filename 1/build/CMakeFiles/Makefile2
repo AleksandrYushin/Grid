@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alexandro/Programms/VS_code_progect/Setca
+CMAKE_SOURCE_DIR = /home/alexandro/Programms/VS_code_progect/Grid/1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alexandro/Programms/VS_code_progect/Setca/build
+CMAKE_BINARY_DIR = /home/alexandro/Programms/VS_code_progect/Grid/1/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -89,14 +89,14 @@ clean: CMakeFiles/cub.dir/clean
 CMakeFiles/sample01.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sample01.dir/build.make CMakeFiles/sample01.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sample01.dir/build.make CMakeFiles/sample01.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles --progress-num=3,4 "Built target sample01"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandro/Programms/VS_code_progect/Grid/1/build/CMakeFiles --progress-num=3,4 "Built target sample01"
 .PHONY : CMakeFiles/sample01.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sample01.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandro/Programms/VS_code_progect/Grid/1/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sample01.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandro/Programms/VS_code_progect/Grid/1/build/CMakeFiles 0
 .PHONY : CMakeFiles/sample01.dir/rule
 
 # Convenience name for target.
@@ -115,14 +115,14 @@ CMakeFiles/sample01.dir/clean:
 CMakeFiles/sample02.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sample02.dir/build.make CMakeFiles/sample02.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sample02.dir/build.make CMakeFiles/sample02.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles --progress-num=5,6 "Built target sample02"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandro/Programms/VS_code_progect/Grid/1/build/CMakeFiles --progress-num=5,6 "Built target sample02"
 .PHONY : CMakeFiles/sample02.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sample02.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandro/Programms/VS_code_progect/Grid/1/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sample02.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandro/Programms/VS_code_progect/Grid/1/build/CMakeFiles 0
 .PHONY : CMakeFiles/sample02.dir/rule
 
 # Convenience name for target.
@@ -141,14 +141,14 @@ CMakeFiles/sample02.dir/clean:
 CMakeFiles/sample03.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sample03.dir/build.make CMakeFiles/sample03.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sample03.dir/build.make CMakeFiles/sample03.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles --progress-num=7,8 "Built target sample03"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandro/Programms/VS_code_progect/Grid/1/build/CMakeFiles --progress-num=7,8 "Built target sample03"
 .PHONY : CMakeFiles/sample03.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sample03.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandro/Programms/VS_code_progect/Grid/1/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sample03.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandro/Programms/VS_code_progect/Grid/1/build/CMakeFiles 0
 .PHONY : CMakeFiles/sample03.dir/rule
 
 # Convenience name for target.
@@ -167,14 +167,14 @@ CMakeFiles/sample03.dir/clean:
 CMakeFiles/sample04.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sample04.dir/build.make CMakeFiles/sample04.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sample04.dir/build.make CMakeFiles/sample04.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles --progress-num=9,10 "Built target sample04"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandro/Programms/VS_code_progect/Grid/1/build/CMakeFiles --progress-num=9,10 "Built target sample04"
 .PHONY : CMakeFiles/sample04.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sample04.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandro/Programms/VS_code_progect/Grid/1/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sample04.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandro/Programms/VS_code_progect/Grid/1/build/CMakeFiles 0
 .PHONY : CMakeFiles/sample04.dir/rule
 
 # Convenience name for target.
@@ -193,14 +193,14 @@ CMakeFiles/sample04.dir/clean:
 CMakeFiles/cub.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub.dir/build.make CMakeFiles/cub.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles --progress-num=1,2 "Built target cub"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandro/Programms/VS_code_progect/Grid/1/build/CMakeFiles --progress-num=1,2 "Built target cub"
 .PHONY : CMakeFiles/cub.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/cub.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandro/Programms/VS_code_progect/Grid/1/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cub.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandro/Programms/VS_code_progect/Setca/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandro/Programms/VS_code_progect/Grid/1/build/CMakeFiles 0
 .PHONY : CMakeFiles/cub.dir/rule
 
 # Convenience name for target.

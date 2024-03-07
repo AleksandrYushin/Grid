@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/alexandro/Programms/VS_code_progect/Setca/cub.cpp" "CMakeFiles/cub.dir/cub.cpp.o" "gcc" "CMakeFiles/cub.dir/cub.cpp.o.d"
+  "/home/alexandro/Programms/VS_code_progect/Grid/1/cub.cpp" "CMakeFiles/cub.dir/cub.cpp.o" "gcc" "CMakeFiles/cub.dir/cub.cpp.o.d"
   )
 
 # Targets to which this target links.

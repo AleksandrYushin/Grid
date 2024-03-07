@@ -1,5 +1,5 @@
 CMakeFiles/sample02.dir/sample02.cpp.o: \
- /home/alexandro/Programms/VS_code_progect/Setca/sample02.cpp \
+ /home/alexandro/Programms/VS_code_progect/Grid/1/sample02.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/set \
  /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_algobase.h \

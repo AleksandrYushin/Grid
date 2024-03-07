@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/alexandro/Programms/VS_code_progect/Setca/sample01.cpp" "CMakeFiles/sample01.dir/sample01.cpp.o" "gcc" "CMakeFiles/sample01.dir/sample01.cpp.o.d"
+  "/home/alexandro/Programms/VS_code_progect/Grid/1/sample01.cpp" "CMakeFiles/sample01.dir/sample01.cpp.o" "gcc" "CMakeFiles/sample01.dir/sample01.cpp.o.d"
   )
 
 # Targets to which this target links.
