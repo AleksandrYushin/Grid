@@ -1,0 +1,3 @@
+/home/alexandro/Programms/VS_code_progect/Grid/micro/build/CMakeFiles/my.dir
+/home/alexandro/Programms/VS_code_progect/Grid/micro/build/CMakeFiles/edit_cache.dir
+/home/alexandro/Programms/VS_code_progect/Grid/micro/build/CMakeFiles/rebuild_cache.dir
