@@ -16,9 +16,9 @@ double source_temp (double x, unsigned int step){
     double A = 300.0;
     double B = 300.0;
     
-    if ((step % 50) < 30)
+    if ((step % 800) < 500)
         A = 400.0;
-    if ((step % 50) > 20)
+    if ((step % 500) > 300)
         B = 400.0;
     return A*x + B*(1.0-x);
 };
@@ -133,22 +133,22 @@ public:
     }
     void move_alpha(double tau) {
         //Изменение под действием температуры
-        alpha += 0.0;
+        alpha += 0;
     }
     void move_p(double tau, double h, unsigned int i, unsigned int j, unsigned int k, vector<vector<vector<CalcNode>>> &points) {
         // Сделаем след в закон Гука: tr(epsilon) = 3p/E - 6p(nu)/E
-        // Итого p = (E/(1-2nu)/6h * (dx+dy+dz))
+        // Итого dp = -K* dV/V где K = E/3(1-2nu)
         double x_before = points[i-1][j][k].x;
         double x_after = points[i+1][j][k].x;
         double y_before = points[i][j-1][k].y;
         double y_after = points[i][j+1][k].y;
         double z_before = points[i][j][k-1].z;
         double z_after = points[i][j][k+1].z;
-        p = 1 *(6*h - x_after + x_before - y_after + y_before - z_after + z_before) /6 /h;
+        p += -1 *(8*h*h*h - (x_after - x_before)*(y_after - y_before)*(z_after - z_before)) /(8*h*h*h);
     }
     void move_p_tp() {
-        if (t > 370 & flag == 0){
-            p += 0;
+        if (t > 350 & flag == 0){
+            p += -0.0000001;
             flag = true;
         };
     }
@@ -185,7 +185,7 @@ public:
                     // Начальная температура ~300К
                     double t = 300.0;
                     // Неоднородная теплопроводность
-                    double alpha = (pow(pointX, 0.9) + pow(pointY, 0.9) + pow(pointZ, 0.9)) * alpha0;
+                    double alpha = alpha0; //(pow(pointX, 1.5) + pow(pointY, 1.5) + pow(pointZ, 1.5)) * 
                     // Задавать скорости в данном примере поленимся, будут нули
                     points[i][j][k] = CalcNode(pointX, pointY, pointZ, t, 0., 0., 0., 0., 0., 0., alpha, 0., rho);
                     points_old[i][j][k] = CalcNode(pointX, pointY, pointZ, t, 0., 0., 0., 0., 0., 0., alpha, 0., rho);
@@ -196,7 +196,6 @@ public:
 
     // Метод отвечает за выполнение для всей сетки шага по времени величиной tau
     void doTimeStep(double tau, double h, unsigned int step) {
-        // Термодинамика
         for(unsigned int i = 0; i < points.size(); i++) {
             for(unsigned int j = 0; j < points[i].size(); j++) {
                 for(unsigned int k = 0; k < points[i][j].size(); k++) {
@@ -204,41 +203,19 @@ public:
                         // Края
                         double l = double(k)/(points[i][j].size()-1);
                         points[i][j][k].move_t_edge(l, step);
-                    }
-                    else {
-                        points[i][j][k].move_t(tau, h, i, j, k, points_old);
-                    }
-                    points[i][j][k].move_alpha(tau);
-                    points[i][j][k].move_p_tp();
-                }
-            }
-        }
-        // Давление
-        for(unsigned int i = 0; i < points.size(); i++) {
-            for(unsigned int j = 0; j < points[i].size(); j++) {
-                for(unsigned int k = 0; k < points[i][j].size(); k++) {
-                    if (i==0 | j==0 | k==0 | i==(points.size()-1) | j==(points[i].size()-1) | k==(points[i][j].size()-1)) {
-                        // Края                       
                         points[i][j][k].move_p_edge();
-                    }
-                    else {
-                        points[i][j][k].move_p(tau, h, i, j, k, points_old);
-                    }
-                }
-            }
-        }
-        // Мехническое движение
-        for(unsigned int i = 0; i < points.size(); i++) {
-            for(unsigned int j = 0; j < points[i].size(); j++) {
-                for(unsigned int k = 0; k < points[i][j].size(); k++) {
-                    // Динамика
-                    if (i==0 | j==0 | k==0 | i==(points.size()-1) | j==(points[i].size()-1) | k==(points[i][j].size()-1)) {
-                        // Края                       
                         points[i][j][k].move_a_edge(tau, h, i, j, k, points_old);
                     }
                     else {
+                        // Термодинамика
+                        points[i][j][k].move_t(tau, h, i, j, k, points_old);
+                        // Давление
+                        points[i][j][k].move_p(tau, h, i, j, k, points_old);
+                        // Динамика
                         points[i][j][k].move_a(tau, h, i, j, k, points_old);
                     }
+                    points[i][j][k].move_alpha(tau);
+                    points[i][j][k].move_p_tp();
                     // Киниматика
                     points[i][j][k].move_v(tau);
                     points[i][j][k].move_x(tau);
@@ -306,17 +283,16 @@ public:
     }
 };
 
-int main()
-{
+int main(){
     // Размер расчётной сетки, точек на сторону
-    unsigned int size = 30;
+    unsigned int size = 100;
     // Шаг точек по пространству
-    double h = 0.01;
+    double h = 0.0001;
     // Шаг по времени
-    double tau = 0.01;
+    double tau = 0.0000001;
     // Температуропроводность, плотность
-    double alpha = 0.003;
-    double rho = 1;
+    double alpha = 0.01;
+    double rho = 10;
 
     // Создаём сетку заданного размера
     CalcMesh mesh(size, h, alpha, rho);
@@ -326,7 +302,7 @@ int main()
 
     // Дальше можно сделать какие-нибудь шаги по времени аналогично 2D-примеру.
     // на каждом шаге считаем новое состояние и пишем его в VTK
-    for(unsigned int step = 1; step < 1000; step++) {
+    for(unsigned int step = 1; step < 5000; step++) {
         mesh.doTimeStep(tau, h, step);
         mesh.snapshot(step);
     }
