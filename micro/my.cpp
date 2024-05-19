@@ -17,9 +17,9 @@ double source_temp (double x, unsigned int step){
     double B = 300.0;
     
     if ((step % 800) < 500)
-        A = 400.0;
+        A = 800.0;
     if ((step % 500) > 300)
-        B = 400.0;
+        B = 800.0;
     return A*x + B*(1.0-x);
 };
 
@@ -122,11 +122,11 @@ public:
         double tz_before = points[i][j][k-1].t;
         double tz_after = points[i][j][k+1].t;
         //Лаплас
-        double Dx = ((tx_after - t)/h - (t - tx_before)/h)/h;
-        double Dy = ((ty_after - t)/h - (t - ty_before)/h)/h;
-        double Dz = ((tz_after - t)/h - (t - tz_before)/h)/h;
+        double Dx = (tx_after + tx_before - 2*t)/h /h;
+        double Dy = (ty_after + ty_before - 2*t)/h /h;
+        double Dz = (tz_after + tz_before - 2*t)/h /h;
         //Итог
-        t += alpha*(Dx+Dy+Dz)*tau;
+        t = points[i][j][k].t + 2*alpha*(Dx+Dy+Dz)*tau;
     }
     void move_t_edge(double l, double step) {
         t = source_temp(l, step);
@@ -148,7 +148,7 @@ public:
     }
     void move_p_tp() {
         if (t > 350 & flag == 0){
-            p += -0.0000001;
+            p += -0.00001;
             flag = true;
         };
     }
@@ -247,9 +247,9 @@ public:
 
         // Обходим все точки нашей расчётной сетки
         unsigned int number = (unsigned int)points.size();
-        for(unsigned int i = 0; i < number; i++) {
-            for(unsigned int j = 0; j < number; j++) {
-                for(unsigned int k = 0; k < number; k++) {
+        for(unsigned int i = 0; i < number; i+=10) {
+            for(unsigned int j = 0; j < number; j+=10) {
+                for(unsigned int k = 0; k < number; k+=10) {
                     // Вставляем новую точку в сетку VTK-снапшота
                     dumpPoints->InsertNextPoint(points[i][j][k].x, points[i][j][k].y, points[i][j][k].z);
 
@@ -291,8 +291,8 @@ int main(){
     // Шаг по времени
     double tau = 0.0000001;
     // Температуропроводность, плотность
-    double alpha = 0.01;
-    double rho = 10;
+    double alpha = 0.005;
+    double rho = 1.0;
 
     // Создаём сетку заданного размера
     CalcMesh mesh(size, h, alpha, rho);
@@ -302,9 +302,11 @@ int main(){
 
     // Дальше можно сделать какие-нибудь шаги по времени аналогично 2D-примеру.
     // на каждом шаге считаем новое состояние и пишем его в VTK
-    for(unsigned int step = 1; step < 5000; step++) {
+    for(unsigned int step = 1; step < 2000; step++) {
         mesh.doTimeStep(tau, h, step);
-        mesh.snapshot(step);
+        if (step % 10 ==1){
+            mesh.snapshot(step);
+        };
     }
 
     return 0;
